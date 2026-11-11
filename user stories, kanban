@@ -1,0 +1,42 @@
+1. Player-and-Tournament-Management
+Tato část se zaměřuje na správu hráčů a založení a správu turnaje.
+
+User stories:
+
+1: Jako pořadatel chci přidávat hráče pomocí jména a jedinečné přezdívky, abych je mohl evidovat v systému.
+2: Jako pořadatel chci zobrazit seznam všech hráčů, abych měl přehled o dostupných hráčích.
+3: Jako pořadatel chci odebrat hráče, který ještě neodehrál žádný zápas, abych mohl udržovat seznam aktuální.
+4: Jako pořadatel chci založit turnaj s názvem, disciplínou a počtem kol, abych mohl připravit soutěž.
+5: Jako pořadatel chci přihlásit hráče do turnaje, abych určil jeho účastníky.
+6: Jako pořadatel chci odhlásit hráče z turnaje před zahájením prvního kola, abych mohl upravit seznam účastníků.
+7: Jako pořadatel chci mít otevřený pouze jeden turnaj, abych mohl jednoznačně spravovat právě probíhající soutěž.
+
+2. Rounds-and-Matches
+Tato část řeší vytváření jednotlivých kol, ruční rozdělování hráčů do dvojic a zadávání výsledků.
+
+User stories:
+
+8: Jako pořadatel chci vytvořit nové kolo turnaje, abych mohl pokračovat v soutěži.
+9: Jako pořadatel chci ručně přiřazovat hráče do dvojic, abych mohl určit, kdo proti komu hraje.
+10: Jako pořadatel chci, aby každý hráč mohl být v jednom kole pouze jednou, abych zabránil duplicitním zápasům.
+11: Jako pořadatel chci automaticky přidělit volný los hráči bez soupeře, abych mohl správně dokončit kolo s lichým počtem hráčů.
+12: Jako pořadatel chci zadávat výsledek zápasu (výhra prvního, výhra druhého nebo remíza), abych zaznamenal průběh turnaje.
+13: Jako pořadatel chci měnit výsledek zápasu před uzavřením kola, abych mohl opravit chybný výsledek.
+14: Jako pořadatel chci uzavřít kolo až po zadání všech výsledků, abych zajistil kompletnost výsledků.
+
+
+3. Scoreboard,-Saving-and-User-Interface
+Tato část se stará o výpočet bodů, zobrazování výsledků, ukládání turnaje a komunikaci s uživatelem.
+
+User stories:
+
+15: Jako pořadatel chci zobrazit průběžnou tabulku turnaje, abych viděl aktuální pořadí hráčů.
+16: Jako pořadatel chci, aby se body automaticky přepočítávaly podle výsledků, abych nemusel počítat skóre ručně.
+17: Jako pořadatel chci vidět počet odehraných zápasů každého hráče, abych měl přehled o jeho účasti.
+18: Jako pořadatel chci uložit rozehraný turnaj, abych mohl program vypnout a později pokračovat.
+19: Jako pořadatel chci načíst uložený turnaj, abych mohl pokračovat tam, kde jsem skončil.
+20: Jako pořadatel chci být upozorněn na chybějící nebo poškozený soubor, abych věděl, proč turnaj nelze načíst.
+21: Jako pořadatel chci ovládat program pomocí přehledného menu, abych mohl jednoduše využívat jeho funkce.
+22: Jako pořadatel chci, aby program kontroloval všechny vstupy, abych nemohl zadat neplatné údaje.
+23: Jako pořadatel chci mít jistotu, že výpis tabulky odpovídá skutečným výsledkům, abych mohl důvěřovat výpočtům programu.
+
