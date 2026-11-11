@@ -1,1 +1,52 @@
 piste sem jmena promenych
+jmenoPromenny(datovyTyp) - co dela
+
+1. Player.cs
+Name(string) – Uchovává skutečné jméno hráče, které zadá pořadatel při registraci nového hráče.
+Nickname(string) – Uchovává přezdívku hráče, podle které ho systém rozpoznává a vyhledává.
+PlayedMatches(int) – Uchovává počet zápasů, které hráč již odehrál, a používá se při kontrole, jestli může být hráč odebrán.
+name(string) – Je vstupní parametr konstruktoru, pomocí kterého se při vytvoření hráče předává jeho jméno.
+nickname(string) – Je vstupní parametr konstruktoru, pomocí kterého se při vytvoření hráče předává jeho přezdívka.
+
+2. Tournament.cs
+Name(string) – Uchovává název vytvořeného turnaje, který zadá pořadatel při jeho zakládání.
+Discipline(string) – Uchovává sportovní disciplínu nebo hru, ve které se turnaj pořádá.
+Rounds(int) – Uchovává celkový počet kol, který má turnaj podle zadání pořadatele obsahovat.
+CurrentRound(int) – Uchovává číslo aktuálně probíhajícího kola a mění se při zahájení dalšího kola.
+Players(Player[]) – Uchovává pole hráčů, kteří jsou přihlášeni do daného turnaje.
+PlayerCount(int) – Uchovává aktuální počet hráčů přihlášených do turnaje a pomáhá určit, na jakou pozici se má uložit další hráč.
+name(string) – Představuje název turnaje předaný konstruktoru při vytváření nového turnaje.
+discipline(string) – Představuje disciplínu turnaje předanou konstruktoru při jeho vytváření.
+rounds(int) – Představuje počet kol předaný konstruktoru při vytváření turnaje.
+player(Player) – Představuje konkrétního hráče, kterého metoda ContainsPlayer() kontroluje, zda je přihlášený do turnaje.
+
+3. PlayerService.cs
+Players(Player[]) – Uchovává všechny hráče zaregistrované v systému a umožňuje s nimi pracovat při přidávání, zobrazování nebo odebírání.
+PlayerCount(int) – Uchovává počet aktuálně zaregistrovaných hráčů a určuje, kolik pozic v poli je obsazených.
+name(string) – Uchovává jméno nového hráče, které pořadatel zadá při jeho přidávání do systému.
+nickname(string) – Uchovává přezdívku hráče, podle které systém kontroluje její jedinečnost a vyhledává konkrétního hráče.
+i(int) – Slouží jako pomocná proměnná v cyklu for a určuje pozici hráče v poli při procházení seznamu.
+j(int) – Slouží jako pomocná proměnná v cyklu for a používá se při posouvání hráčů v poli po odebrání některého z nich.
+player(Player) – Uchovává odkaz na konkrétního nalezeného hráče, se kterým metoda dále pracuje.
+tournament(Tournament) – Představuje turnaj, ve kterém systém kontroluje, jestli je odebíraný hráč stále přihlášený.
+
+4. TournamentService.cs
+CurrentTournament(Tournament) – Uchovává aktuálně vytvořený turnaj a umožňuje ostatním metodám přistupovat k jeho údajům a přihlášeným hráčům.
+name(string) – Uchovává název, který pořadatel zadá při vytváření nového turnaje.
+discipline(string) – Uchovává disciplínu, ve které se bude vytvořený turnaj pořádat.
+rounds(int) – Uchovává počet kol, který pořadatel určí při zakládání turnaje.
+player(Player) – Představuje hráče, kterého chce pořadatel přihlásit do aktuálního turnaje.
+nickname(string) – Uchovává přezdívku hráče, podle které systém hledá hráče při přihlašování nebo odhlašování.
+i(int) – Slouží jako pomocná proměnná v cyklu for a určuje pozici hráče při procházení pole přihlášených hráčů.
+j(int) – Slouží jako pomocná proměnná v cyklu for a používá se k posouvání hráčů v poli při odhlašování některého z nich.
+
+5. Program.cs
+playerService(PlayerService) – Vytváří objekt služby pro správu hráčů a umožňuje hlavnímu programu volat metody pro přidávání, zobrazování a odebírání hráčů.
+tournamentService(TournamentService) – Vytváří objekt služby pro správu turnaje a umožňuje hlavnímu programu vytvářet turnaj, přihlašovat hráče a spravovat jednotlivá kola.
+running(bool) – Určuje, jestli má hlavní program pokračovat v zobrazování menu, nebo se má ukončit.
+choice(string) – Uchovává volbu, kterou uživatel zadal v hlavním menu, a podle její hodnoty program rozhoduje, jakou operaci provede.
+name(string) – Uchovává jméno hráče nebo název turnaje podle toho, ve které metodě je proměnná použita.
+nickname(string) – Uchovává přezdívku hráče zadanou uživatelem a předává ji metodám pro vyhledávání, přihlašování nebo odebírání hráčů.
+discipline(string) – Uchovává název disciplíny zadaný pořadatelem při vytváření turnaje.
+rounds(int) – Uchovává počet kol zadaný uživatelem a předává ho metodě pro vytvoření turnaje.
+player(Player) – Uchovává nalezeného hráče, kterého chce pořadatel přihlásit do turnaje, a předává ho službě TournamentService.
