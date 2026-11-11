@@ -36,7 +36,7 @@ User stories:
 18: Jako pořadatel chci uložit rozehraný turnaj, abych mohl program vypnout a později pokračovat.
 19: Jako pořadatel chci načíst uložený turnaj, abych mohl pokračovat tam, kde jsem skončil.
 20: Jako pořadatel chci být upozorněn na chybějící nebo poškozený soubor.
-21: Jako pořadatel chci ovládat program pomocí přehledného menu, abych mohl jednoduše využívat jeho funkce.
+21: Jako pořadatel chci ovládat program pomocí přehledného menu, abych mohl jednoduše využívat jeho funkce. - rozpracováno
 22: Jako pořadatel chci, aby program kontroloval všechny vstupy, abych nemohl zadat neplatné údaje.
 23: Jako pořadatel chci mít jistotu, že výpis tabulky odpovídá skutečným výsledkům, abych mohl důvěřovat výpočtům programu.
 
