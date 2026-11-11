@@ -25,7 +25,7 @@ User stories:
 14: Jako pořadatel chci uzavřít kolo až po zadání všech výsledků, abych zajistil kompletnost výsledků.
 
 
-3. Scoreboard,-Saving-and-User-Interface
+3. Scoreboard,-Saving-and-User-Interface - Vojtěch Němec
 Tato část se stará o výpočet bodů, zobrazování výsledků, ukládání turnaje a komunikaci s uživatelem.
 
 User stories:
