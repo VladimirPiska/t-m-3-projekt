@@ -16,7 +16,7 @@ Tato část řeší vytváření jednotlivých kol, ruční rozdělování hrá�
 
 User stories:
 
-8: Jako pořadatel chci vytvořit nové kolo turnaje, abych mohl pokračovat v soutěži.
+8: Jako pořadatel chci vytvořit nové kolo turnaje, abych mohl pokračovat v soutěži.   ---------------------------rozpracováno
 9: Jako pořadatel chci ručně přiřazovat hráče do dvojic, abych mohl určit, kdo proti komu hraje.
 10: Jako pořadatel chci, aby každý hráč mohl být v jednom kole pouze jednou, abych zabránil duplicitním zápasům.
 11: Jako pořadatel chci automaticky přidělit volný los hráči bez soupeře, abych mohl správně dokončit kolo s lichým počtem hráčů.
@@ -31,11 +31,11 @@ Tato část se stará o výpočet bodů, zobrazování výsledků, ukládání t
 User stories:
 
 15: Jako pořadatel chci zobrazit průběžnou tabulku turnaje, abych viděl aktuální pořadí hráčů.
-16: Jako pořadatel chci, aby se body automaticky přepočítávaly podle výsledků, abych nemusel počítat skóre ručně.
+16: Jako pořadatel chci, aby se body automaticky přepočítávaly podle výsledků, abych nemusel počítat skóre ručně.  
 17: Jako pořadatel chci vidět počet odehraných zápasů každého hráče, abych měl přehled o jeho účasti.
 18: Jako pořadatel chci uložit rozehraný turnaj, abych mohl program vypnout a později pokračovat.
 19: Jako pořadatel chci načíst uložený turnaj, abych mohl pokračovat tam, kde jsem skončil.
-20: Jako pořadatel chci být upozorněn na chybějící nebo poškozený soubor, abych věděl, proč turnaj nelze načíst.
+20: Jako pořadatel chci být upozorněn na chybějící nebo poškozený soubor.
 21: Jako pořadatel chci ovládat program pomocí přehledného menu, abych mohl jednoduše využívat jeho funkce.
 22: Jako pořadatel chci, aby program kontroloval všechny vstupy, abych nemohl zadat neplatné údaje.
 23: Jako pořadatel chci mít jistotu, že výpis tabulky odpovídá skutečným výsledkům, abych mohl důvěřovat výpočtům programu.
