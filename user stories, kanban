@@ -16,7 +16,7 @@ Tato část řeší vytváření jednotlivých kol, ruční rozdělování hrá�
 
 User stories:
 
-8: Jako pořadatel chci vytvořit nové kolo turnaje, abych mohl pokračovat v soutěži.   ---------------------------rozpracováno
+8: Jako pořadatel chci vytvořit nové kolo turnaje, abych mohl pokračovat v soutěži. 
 9: Jako pořadatel chci ručně přiřazovat hráče do dvojic, abych mohl určit, kdo proti komu hraje.
 10: Jako pořadatel chci, aby každý hráč mohl být v jednom kole pouze jednou, abych zabránil duplicitním zápasům.
 11: Jako pořadatel chci automaticky přidělit volný los hráči bez soupeře, abych mohl správně dokončit kolo s lichým počtem hráčů.
