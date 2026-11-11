@@ -11,7 +11,7 @@ User stories:
 6: Jako pořadatel chci odhlásit hráče z turnaje před zahájením prvního kola, abych mohl upravit seznam účastníků.
 7: Jako pořadatel chci mít otevřený pouze jeden turnaj, abych mohl jednoznačně spravovat právě probíhající soutěž.
 
-2. Rounds-and-Matches
+2. Rounds-and-Matches - David Zach
 Tato část řeší vytváření jednotlivých kol, ruční rozdělování hráčů do dvojic a zadávání výsledků.
 
 User stories:
