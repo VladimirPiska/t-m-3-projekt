@@ -1,52 +1,79 @@
 piste sem jmena promenych
 jmenoPromenny(datovyTyp) - co dela
 
-1. Player.cs
-Name(string) – Uchovává skutečné jméno hráče, které zadá pořadatel při registraci nového hráče.
-Nickname(string) – Uchovává přezdívku hráče, podle které ho systém rozpoznává a vyhledává.
-PlayedMatches(int) – Uchovává počet zápasů, které hráč již odehrál, a používá se při kontrole, jestli může být hráč odebrán.
-name(string) – Je vstupní parametr konstruktoru, pomocí kterého se při vytvoření hráče předává jeho jméno.
-nickname(string) – Je vstupní parametr konstruktoru, pomocí kterého se při vytvoření hráče předává jeho přezdívka.
+USERSTORY 8
 
-2. Tournament.cs
-Name(string) – Uchovává název vytvořeného turnaje, který zadá pořadatel při jeho zakládání.
-Discipline(string) – Uchovává sportovní disciplínu nebo hru, ve které se turnaj pořádá.
-Rounds(int) – Uchovává celkový počet kol, který má turnaj podle zadání pořadatele obsahovat.
-CurrentRound(int) – Uchovává číslo aktuálně probíhajícího kola a mění se při zahájení dalšího kola.
-Players(Player[]) – Uchovává pole hráčů, kteří jsou přihlášeni do daného turnaje.
-PlayerCount(int) – Uchovává aktuální počet hráčů přihlášených do turnaje a pomáhá určit, na jakou pozici se má uložit další hráč.
-name(string) – Představuje název turnaje předaný konstruktoru při vytváření nového turnaje.
-discipline(string) – Představuje disciplínu turnaje předanou konstruktoru při jeho vytváření.
-rounds(int) – Představuje počet kol předaný konstruktoru při vytváření turnaje.
-player(Player) – Představuje konkrétního hráče, kterého metoda ContainsPlayer() kontroluje, zda je přihlášený do turnaje.
+Match.cs
+Player1(Player) – Uchovává prvního hráče zápasu.
+Player2(Player) – Uchovává druhého hráče zápasu.
+Match()(konstruktor) – Vytvoří zápas dvou hráčů.
+player1(Player) – Je vstupní parametr konstruktoru s prvním hráčem.
+player2(Player) – Je vstupní parametr konstruktoru s druhým hráčem.
 
-3. PlayerService.cs
-Players(Player[]) – Uchovává všechny hráče zaregistrované v systému a umožňuje s nimi pracovat při přidávání, zobrazování nebo odebírání.
-PlayerCount(int) – Uchovává počet aktuálně zaregistrovaných hráčů a určuje, kolik pozic v poli je obsazených.
-name(string) – Uchovává jméno nového hráče, které pořadatel zadá při jeho přidávání do systému.
-nickname(string) – Uchovává přezdívku hráče, podle které systém kontroluje její jedinečnost a vyhledává konkrétního hráče.
-i(int) – Slouží jako pomocná proměnná v cyklu for a určuje pozici hráče v poli při procházení seznamu.
-j(int) – Slouží jako pomocná proměnná v cyklu for a používá se při posouvání hráčů v poli po odebrání některého z nich.
-player(Player) – Uchovává odkaz na konkrétního nalezeného hráče, se kterým metoda dále pracuje.
-tournament(Tournament) – Představuje turnaj, ve kterém systém kontroluje, jestli je odebíraný hráč stále přihlášený.
+Round.cs
+Number(int) – Uchovává pořadové číslo kola v turnaji.
+Matches(Match[]) – Uchovává pole zápasů v kole.
+MatchCount(int) – Uchovává počet zápasů, které jsou v kole vytvořené.
+IsClosed(bool) – Určuje, jestli je kolo uzavřené.
+Round()(konstruktor) – Vytvoří nové otevřené kolo s prázdným polem zápasů.
+number(int) – Je vstupní parametr konstruktoru s číslem kola.
+maxMatches(int) – Je vstupní parametr konstruktoru s maximálním počtem zápasů v kole.
 
-4. TournamentService.cs
-CurrentTournament(Tournament) – Uchovává aktuálně vytvořený turnaj a umožňuje ostatním metodám přistupovat k jeho údajům a přihlášeným hráčům.
-name(string) – Uchovává název, který pořadatel zadá při vytváření nového turnaje.
-discipline(string) – Uchovává disciplínu, ve které se bude vytvořený turnaj pořádat.
-rounds(int) – Uchovává počet kol, který pořadatel určí při zakládání turnaje.
-player(Player) – Představuje hráče, kterého chce pořadatel přihlásit do aktuálního turnaje.
-nickname(string) – Uchovává přezdívku hráče, podle které systém hledá hráče při přihlašování nebo odhlašování.
-i(int) – Slouží jako pomocná proměnná v cyklu for a určuje pozici hráče při procházení pole přihlášených hráčů.
-j(int) – Slouží jako pomocná proměnná v cyklu for a používá se k posouvání hráčů v poli při odhlašování některého z nich.
+Tournament.cs
+RoundList(Round[]) – Uchovává pole všech vytvořených kol turnaje.
+RoundCount(int) – Uchovává počet kol, která už byla vytvořena.
+AddRound()(void) – Uloží nové kolo do turnaje a nastaví ho jako aktuální.
+GetRound()(Round) – Vrátí kolo podle jeho čísla, nebo null, pokud neexistuje.
+round(Round) – Je vstupní parametr metody AddRound() s kolem, které se přidává.
+roundNumber(int) – Je vstupní parametr metody GetRound() s číslem hledaného kola.
 
-5. Program.cs
-playerService(PlayerService) – Vytváří objekt služby pro správu hráčů a umožňuje hlavnímu programu volat metody pro přidávání, zobrazování a odebírání hráčů.
-tournamentService(TournamentService) – Vytváří objekt služby pro správu turnaje a umožňuje hlavnímu programu vytvářet turnaj, přihlašovat hráče a spravovat jednotlivá kola.
-running(bool) – Určuje, jestli má hlavní program pokračovat v zobrazování menu, nebo se má ukončit.
-choice(string) – Uchovává volbu, kterou uživatel zadal v hlavním menu, a podle její hodnoty program rozhoduje, jakou operaci provede.
-name(string) – Uchovává jméno hráče nebo název turnaje podle toho, ve které metodě je proměnná použita.
-nickname(string) – Uchovává přezdívku hráče zadanou uživatelem a předává ji metodám pro vyhledávání, přihlašování nebo odebírání hráčů.
-discipline(string) – Uchovává název disciplíny zadaný pořadatelem při vytváření turnaje.
-rounds(int) – Uchovává počet kol zadaný uživatelem a předává ho metodě pro vytvoření turnaje.
-player(Player) – Uchovává nalezeného hráče, kterého chce pořadatel přihlásit do turnaje, a předává ho službě TournamentService.
+RoundService.cs
+tournamentService(TournamentService) – Uchovává službu turnaje, přes kterou se získá aktuální turnaj.
+RoundService()(konstruktor) – Vytvoří službu pro správu kol a předá jí službu turnaje.
+GetCurrentRound()(Round) – Vrátí aktuálně probíhající kolo, nebo null, pokud žádné není.
+CreateRound()(bool) – Vytvoří nové kolo, pokud je turnaj otevřený, nejsou všechna kola vytvořená a předchozí kolo je uzavřené.
+tournament(Tournament) – Uchovává aktuální turnaj, se kterým metoda pracuje.
+currentRound(Round) – Uchovává právě probíhající kolo.
+maxMatches(int) – Uchovává maximální počet zápasů v kole spočítaný z počtu hráčů.
+newRound(Round) – Uchovává nově vytvořené kolo.
+
+Program.cs
+roundService(RoundService) – Uchovává službu pro správu kol, zápasů a výsledků.
+
+
+USERSTORY 9
+
+Round.cs
+AddMatch()(void) – Přidá zápas do pole zápasů kola.
+match(Match) – Je vstupní parametr metody AddMatch() se zápasem, který se přidává.
+
+RoundService.cs
+AddMatch()(bool) – Vytvoří zápas z dvou hráčů podle přezdívek a přidá ho do aktuálního kola.
+nickname1(string) – Je vstupní parametr metody AddMatch() s přezdívkou prvního hráče.
+nickname2(string) – Je vstupní parametr metody AddMatch() s přezdívkou druhého hráče.
+player1(Player) – Uchovává nalezeného prvního hráče zápasu.
+player2(Player) – Uchovává nalezeného druhého hráče zápasu.
+match(Match) – Uchovává nově vytvořený zápas.
+
+Program.cs
+nickname1(string) – Uchovává přezdívku prvního hráče zadanou uživatelem při vytváření dvojice.
+nickname2(string) – Uchovává přezdívku druhého hráče zadanou uživatelem při vytváření dvojice.
+
+
+
+USERSTORY 10
+
+Match.cs
+ContainsPlayer()(bool) – Zjistí, jestli daný hráč hraje v tomto zápase.
+player(Player) – Je vstupní parametr metody ContainsPlayer() s hráčem, který se kontroluje.
+
+Round.cs
+ContainsPlayer()(bool) – Zjistí, jestli daný hráč už hraje v některém zápase kola.
+player(Player) – Je vstupní parametr metody ContainsPlayer() s hráčem, který se kontroluje.
+i(int) – Slouží jako pomocná proměnná v cyklu for při procházení zápasů kola.
+
+RoundService.cs
+isSamePlayer(bool) – Určuje, jestli pořadatel zadal stejného hráče jako prvního i druhého.
+isPlayer1Used(bool) – Určuje, jestli první hráč už v aktuálním kole hraje.
+isPlayer2Used(bool) – Určuje, jestli druhý hráč už v aktuálním kole hraje.
+
