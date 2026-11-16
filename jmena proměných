@@ -77,3 +77,25 @@ isSamePlayer(bool) – Určuje, jestli pořadatel zadal stejného hráče jako p
 isPlayer1Used(bool) – Určuje, jestli první hráč už v aktuálním kole hraje.
 isPlayer2Used(bool) – Určuje, jestli druhý hráč už v aktuálním kole hraje.
 
+
+USERSTORY 11
+
+Match.cs
+IsBye(bool) – Určuje, jestli jde o volný los, tedy zápas bez soupeře.
+Match()(konstruktor) – Druhý konstruktor, který vytvoří zápas s volným losem pro jednoho hráče.
+
+Round.cs
+CountPlayers()(int) – Spočítá, kolik hráčů je v kole už zařazeno do zápasů.
+count(int) – Uchovává počet hráčů zařazených v kole.
+
+RoundService.cs
+AssignBye()(bool) – Přidělí volný los hráči, který zbyl bez soupeře, pokud je počet hráčů lichý.
+found(bool) – Určuje, jestli už je v kole nějaký volný los přidělený.
+j(int) – Slouží jako pomocná proměnná v cyklu for při kontrole zápasů kola.
+playersInRound(int) – Uchovává počet hráčů, kteří už jsou v kole zařazení.
+freePlayer(Player) – Uchovává hráče, který zůstal bez soupeře.
+i(int) – Slouží jako pomocná proměnná v cyklu for při procházení přihlášených hráčů.
+player(Player) – Uchovává hráče, kterého cyklus právě kontroluje.
+isFree(bool) – Určuje, jestli kontrolovaný hráč ještě není zařazený v žádném zápase kola.
+byeMatch(Match) – Uchovává zápas s volným losem.
+
