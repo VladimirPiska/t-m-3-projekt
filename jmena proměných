@@ -135,3 +135,31 @@ i(int) – Slouží jako pomocná proměnná v cyklu for při výpisu zápasů k
 matchNumber(int) – Uchovává číslo zápasu zadané uživatelem.
 resultChoice(int) – Uchovává volbu výsledku zadanou uživatelem (1, 2 nebo 3).
 result(MatchResult) – Uchovává výsledek převedený z volby uživatele.
+
+USERSTORY 15
+
+Points(int) – Uchovává počet bodů hráče v turnaji.
+tournamentService(TournamentService) – Uchovává službu turnaje, přes kterou se získá aktuální turnaj.
+ScoreboardService()(konstruktor) – Vytvoří službu tabulky a předá jí službu turnaje.
+ShowScoreboard()(void) – Vypíše průběžnou tabulku hráčů seřazenou podle bodů.
+tournament(Tournament) – Uchovává aktuální turnaj, ze kterého se tabulka vypisuje.
+sorted(Player[]) – Uchovává kopii pole hráčů seřazenou podle bodů a přezdívky.
+i(int) – Slouží jako pomocná proměnná v cyklech for při kopírování, řazení a výpisu hráčů.
+j(int) – Slouží jako pomocná proměnná ve vnitřním cyklu řazení hráčů.
+swap(bool) – Určuje, jestli se dva sousední hráči mají při řazení prohodit.
+temp(Player) – Uchovává hráče při prohazování dvou pozic v poli.
+
+USERTASK 16
+
+WinPoints(int) – Konstanta s počtem bodů za výhru (3).
+DrawPoints(int) – Konstanta s počtem bodů za remízu (1).
+RecalculatePoints()(void) – Vynuluje body hráčů a znovu je spočítá z výsledků všech uzavřených kol.
+r(int) – Slouží jako pomocná proměnná v cyklu for při procházení kol.
+m(int) – Slouží jako pomocná proměnná v cyklu for při procházení zápasů kola.
+round(Round) – Uchovává kolo, které se právě zpracovává.
+match(Match) – Uchovává zápas, který se právě zpracovává.
+
+USERTASK 17
+
+ShowPlayedMatches()(void) – Vypíše počet odehraných zápasů každého hráče v turnaji.
+player(Player) – Uchovává hráče, jehož počet zápasů se právě vypisuje.
