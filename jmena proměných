@@ -12,6 +12,11 @@ Player()(konstruktor) – Vytvoří nového hráče a nastaví mu jméno, přezd
 name(string) – Je vstupní parametr konstruktoru s jménem hráče.
 nickname(string) – Je vstupní parametr konstruktoru s přezdívkou hráče.
 
+USERSTORY 2
+
+PlayerService.cs
+ShowPlayers()(void) – Vypíše seznam všech hráčů v systému s jejich přezdívkou a jménem.
+
 PlayerService.cs
 MaxPlayers(int) – Konstanta s maximálním počtem hráčů, které lze zaregistrovat v systému.
 Players(Player[]) – Uchovává pole všech hráčů zaregistrovaných v systému.
