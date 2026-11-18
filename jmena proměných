@@ -3,14 +3,11 @@ jmenoPromenny(datovyTyp) - co dela
 
 USERSTORY 8
 
-Match.cs
 Player1(Player) – Uchovává prvního hráče zápasu.
 Player2(Player) – Uchovává druhého hráče zápasu.
 Match()(konstruktor) – Vytvoří zápas dvou hráčů.
 player1(Player) – Je vstupní parametr konstruktoru s prvním hráčem.
 player2(Player) – Je vstupní parametr konstruktoru s druhým hráčem.
-
-Round.cs
 Number(int) – Uchovává pořadové číslo kola v turnaji.
 Matches(Match[]) – Uchovává pole zápasů v kole.
 MatchCount(int) – Uchovává počet zápasů, které jsou v kole vytvořené.
@@ -18,16 +15,12 @@ IsClosed(bool) – Určuje, jestli je kolo uzavřené.
 Round()(konstruktor) – Vytvoří nové otevřené kolo s prázdným polem zápasů.
 number(int) – Je vstupní parametr konstruktoru s číslem kola.
 maxMatches(int) – Je vstupní parametr konstruktoru s maximálním počtem zápasů v kole.
-
-Tournament.cs
 RoundList(Round[]) – Uchovává pole všech vytvořených kol turnaje.
 RoundCount(int) – Uchovává počet kol, která už byla vytvořena.
 AddRound()(void) – Uloží nové kolo do turnaje a nastaví ho jako aktuální.
 GetRound()(Round) – Vrátí kolo podle jeho čísla, nebo null, pokud neexistuje.
 round(Round) – Je vstupní parametr metody AddRound() s kolem, které se přidává.
 roundNumber(int) – Je vstupní parametr metody GetRound() s číslem hledaného kola.
-
-RoundService.cs
 tournamentService(TournamentService) – Uchovává službu turnaje, přes kterou se získá aktuální turnaj.
 RoundService()(konstruktor) – Vytvoří službu pro správu kol a předá jí službu turnaje.
 GetCurrentRound()(Round) – Vrátí aktuálně probíhající kolo, nebo null, pokud žádné není.
@@ -36,43 +29,29 @@ tournament(Tournament) – Uchovává aktuální turnaj, se kterým metoda pracu
 currentRound(Round) – Uchovává právě probíhající kolo.
 maxMatches(int) – Uchovává maximální počet zápasů v kole spočítaný z počtu hráčů.
 newRound(Round) – Uchovává nově vytvořené kolo.
-
-Program.cs
 roundService(RoundService) – Uchovává službu pro správu kol, zápasů a výsledků.
 
 
 USERSTORY 9
-
-Round.cs
 AddMatch()(void) – Přidá zápas do pole zápasů kola.
 match(Match) – Je vstupní parametr metody AddMatch() se zápasem, který se přidává.
-
-RoundService.cs
 AddMatch()(bool) – Vytvoří zápas z dvou hráčů podle přezdívek a přidá ho do aktuálního kola.
 nickname1(string) – Je vstupní parametr metody AddMatch() s přezdívkou prvního hráče.
 nickname2(string) – Je vstupní parametr metody AddMatch() s přezdívkou druhého hráče.
 player1(Player) – Uchovává nalezeného prvního hráče zápasu.
 player2(Player) – Uchovává nalezeného druhého hráče zápasu.
 match(Match) – Uchovává nově vytvořený zápas.
-
-Program.cs
 nickname1(string) – Uchovává přezdívku prvního hráče zadanou uživatelem při vytváření dvojice.
 nickname2(string) – Uchovává přezdívku druhého hráče zadanou uživatelem při vytváření dvojice.
 
 
 
 USERSTORY 10
-
-Match.cs
 ContainsPlayer()(bool) – Zjistí, jestli daný hráč hraje v tomto zápase.
 player(Player) – Je vstupní parametr metody ContainsPlayer() s hráčem, který se kontroluje.
-
-Round.cs
 ContainsPlayer()(bool) – Zjistí, jestli daný hráč už hraje v některém zápase kola.
 player(Player) – Je vstupní parametr metody ContainsPlayer() s hráčem, který se kontroluje.
 i(int) – Slouží jako pomocná proměnná v cyklu for při procházení zápasů kola.
-
-RoundService.cs
 isSamePlayer(bool) – Určuje, jestli pořadatel zadal stejného hráče jako prvního i druhého.
 isPlayer1Used(bool) – Určuje, jestli první hráč už v aktuálním kole hraje.
 isPlayer2Used(bool) – Určuje, jestli druhý hráč už v aktuálním kole hraje.
@@ -80,15 +59,10 @@ isPlayer2Used(bool) – Určuje, jestli druhý hráč už v aktuálním kole hra
 
 USERSTORY 11
 
-Match.cs
 IsBye(bool) – Určuje, jestli jde o volný los, tedy zápas bez soupeře.
 Match()(konstruktor) – Druhý konstruktor, který vytvoří zápas s volným losem pro jednoho hráče.
-
-Round.cs
 CountPlayers()(int) – Spočítá, kolik hráčů je v kole už zařazeno do zápasů.
 count(int) – Uchovává počet hráčů zařazených v kole.
-
-RoundService.cs
 AssignBye()(bool) – Přidělí volný los hráči, který zbyl bez soupeře, pokud je počet hráčů lichý.
 found(bool) – Určuje, jestli už je v kole nějaký volný los přidělený.
 j(int) – Slouží jako pomocná proměnná v cyklu for při kontrole zápasů kola.
@@ -99,3 +73,27 @@ player(Player) – Uchovává hráče, kterého cyklus právě kontroluje.
 isFree(bool) – Určuje, jestli kontrolovaný hráč ještě není zařazený v žádném zápase kola.
 byeMatch(Match) – Uchovává zápas s volným losem.
 
+
+USERSTORY 12
+NotPlayed(MatchResult) – Označuje zápas, ke kterému ještě není zadaný výsledek.
+FirstWin(MatchResult) – Označuje výhru prvního hráče.
+SecondWin(MatchResult) – Označuje výhru druhého hráče.
+Draw(MatchResult) – Označuje remízu.
+Result(MatchResult) – Uchovává výsledek zápasu, na začátku je NotPlayed.
+SetResult()(void) – Uloží k zápasu zadaný výsledek.
+result(MatchResult) – Je vstupní parametr metody SetResult() s novým výsledkem.
+GetMatch()(Match) – Vrátí zápas podle jeho čísla v kole, nebo null, pokud neexistuje.
+matchNumber(int) – Je vstupní parametr metody GetMatch() s číslem zápasu (číslování od 1).
+ParseResult()(bool) – Převede volbu 1 až 3 na hodnotu MatchResult a vrátí, jestli byla volba platná.
+SetMatchResult()(bool) – Zapíše výsledek k vybranému zápasu aktuálního kola.
+PrintCurrentRound()(void) – Vypíše zápasy aktuálního kola i s jejich výsledky.
+choice(int) – Je vstupní parametr metody ParseResult() s volbou výsledku zadanou uživatelem.
+result(MatchResult) – Uchovává převedený výsledek zápasu.
+round(Round) – Uchovává aktuální kolo, se kterým metoda pracuje.
+matchNumber(int) – Uchovává číslo zápasu, ke kterému se zadává výsledek.
+resultText(string) – Uchovává textový popis výsledku zápasu pro výpis.
+secondName(string) – Uchovává přezdívku druhého hráče, nebo pomlčku u volného losu.
+i(int) – Slouží jako pomocná proměnná v cyklu for při výpisu zápasů kola.
+matchNumber(int) – Uchovává číslo zápasu zadané uživatelem.
+resultChoice(int) – Uchovává volbu výsledku zadanou uživatelem (1, 2 nebo 3).
+result(MatchResult) – Uchovává výsledek převedený z volby uživatele.
