@@ -37,6 +37,12 @@ choice(string) – Uchovává volbu, kterou uživatel zadal v menu.
 name(string) – Uchovává jméno hráče nebo název turnaje zadané uživatelem.
 nickname(string) – Uchovává přezdívku hráče zadanou uživatelem.
 
+
+USERSTORY 2
+
+PlayerService.cs
+ShowPlayers()(void) – Vypíše seznam všech hráčů v systému s jejich přezdívkou a jménem.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
