@@ -1,6 +1,37 @@
 piste sem jmena promenych
 jmenoPromenny(datovyTyp) - co dela
 
+
+USERSTORY 1
+
+Player.cs
+Name(string) – Uchovává skutečné jméno hráče zadané při jeho přidání do systému.
+Nickname(string) – Uchovává jedinečnou přezdívku hráče, podle které se hráč v systému vyhledává.
+PlayedMatches(int) – Uchovává počet zápasů, které hráč odehrál.
+Player()(konstruktor) – Vytvoří nového hráče a nastaví mu jméno, přezdívku a nulový počet zápasů.
+name(string) – Je vstupní parametr konstruktoru s jménem hráče.
+nickname(string) – Je vstupní parametr konstruktoru s přezdívkou hráče.
+
+PlayerService.cs
+MaxPlayers(int) – Konstanta s maximálním počtem hráčů, které lze zaregistrovat v systému.
+Players(Player[]) – Uchovává pole všech hráčů zaregistrovaných v systému.
+PlayerCount(int) – Uchovává počet aktuálně zaregistrovaných hráčů.
+PlayerService()(konstruktor) – Vytvoří prázdné pole hráčů a nastaví jejich počet na nulu.
+FindPlayer()(Player) – Najde hráče podle přezdívky a vrátí ho, nebo vrátí null, pokud neexistuje.
+AddPlayer()(bool) – Přidá nového hráče do systému, pokud je přezdívka jedinečná a není dosažen maximální počet hráčů.
+name(string) – Je vstupní parametr metody AddPlayer() s jménem nového hráče.
+nickname(string) – Je vstupní parametr metod FindPlayer() a AddPlayer() s přezdívkou hráče.
+player(Player) – Uchovává nalezeného hráče, kterého metoda FindPlayer() vrací.
+i(int) – Slouží jako pomocná proměnná v cyklu for při procházení pole hráčů.
+
+Program.cs
+Main()(void) – Je vstupní bod programu, vytváří služby a ve smyčce zobrazuje menu a provádí zvolené akce.
+playerService(PlayerService) – Uchovává službu pro správu hráčů, přes kterou program přidává a spravuje hráče.
+running(bool) – Určuje, jestli program dál zobrazuje menu, nebo se má ukončit.
+choice(string) – Uchovává volbu, kterou uživatel zadal v menu.
+name(string) – Uchovává jméno hráče nebo název turnaje zadané uživatelem.
+nickname(string) – Uchovává přezdívku hráče zadanou uživatelem.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
