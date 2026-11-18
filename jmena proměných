@@ -136,6 +136,21 @@ matchNumber(int) – Uchovává číslo zápasu zadané uživatelem.
 resultChoice(int) – Uchovává volbu výsledku zadanou uživatelem (1, 2 nebo 3).
 result(MatchResult) – Uchovává výsledek převedený z volby uživatele.
 
+USERSTORY 13
+ChangeMatchResult()(bool) – Změní už zadaný výsledek zápasu, pokud kolo ještě není uzavřené.
+newResult(MatchResult) – Je vstupní parametr metody ChangeMatchResult() s novým výsledkem.
+isClosed(bool) – Určuje, jestli je kolo uzavřené, a pokud ano, výsledek se nezmění.
+newResultChoice(int) – Uchovává novou volbu výsledku zadanou uživatelem při opravě.
+
+
+USERSTROY 14
+AllResultsEntered()(bool) – Zjistí, jestli mají všechny zápasy kola (kromě volného losu) zadaný výsledek.
+Close()(void) – Označí kolo jako uzavřené.
+allResultsEntered(bool) – Uchovává informaci, jestli jsou všechny výsledky zadané.
+CloseRound()(bool) – Uzavře kolo, pokud jsou v něm všichni hráči a všechny výsledky, a přičte hráčům odehrané zápasy.
+isComplete(bool) – Určuje, jestli jsou v kole zadané všechny výsledky.
+
+
 USERSTORY 15
 
 Points(int) – Uchovává počet bodů hráče v turnaji.
@@ -149,7 +164,7 @@ j(int) – Slouží jako pomocná proměnná ve vnitřním cyklu řazení hráč
 swap(bool) – Určuje, jestli se dva sousední hráči mají při řazení prohodit.
 temp(Player) – Uchovává hráče při prohazování dvou pozic v poli.
 
-USERTASK 16
+USERSTORY 16
 
 WinPoints(int) – Konstanta s počtem bodů za výhru (3).
 DrawPoints(int) – Konstanta s počtem bodů za remízu (1).
@@ -159,7 +174,7 @@ m(int) – Slouží jako pomocná proměnná v cyklu for při procházení zápa
 round(Round) – Uchovává kolo, které se právě zpracovává.
 match(Match) – Uchovává zápas, který se právě zpracovává.
 
-USERTASK 17
+USERSTORY 17
 
 ShowPlayedMatches()(void) – Vypíše počet odehraných zápasů každého hráče v turnaji.
 player(Player) – Uchovává hráče, jehož počet zápasů se právě vypisuje.
