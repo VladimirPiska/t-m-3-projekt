@@ -46,6 +46,34 @@ RemovePlayer()(bool) – Odebere hráče ze systému, pokud existuje a ještě n
 position(int) – Uchovává pozici odebíraného hráče v poli hráčů.
 j(int) – Slouží jako pomocná proměnná v cyklu for při posouvání hráčů v poli po odebrání jednoho z nich.
 
+userstory 4
+
+Tournament.cs
+MaxPlayers(int) – Konstanta s maximálním počtem hráčů přihlášených do turnaje.
+Name(string) – Uchovává název turnaje.
+Discipline(string) – Uchovává disciplínu, ve které se turnaj pořádá.
+Rounds(int) – Uchovává celkový počet kol turnaje.
+CurrentRound(int) – Uchovává číslo aktuálního kola, na začátku je 0.
+Players(Player[]) – Uchovává pole hráčů přihlášených do turnaje.
+PlayerCount(int) – Uchovává počet hráčů přihlášených do turnaje.
+Tournament()(konstruktor) – Vytvoří nový turnaj s názvem, disciplínou a počtem kol a nastaví výchozí hodnoty.
+name(string) – Je vstupní parametr konstruktoru s názvem turnaje.
+discipline(string) – Je vstupní parametr konstruktoru s disciplínou turnaje.
+rounds(int) – Je vstupní parametr konstruktoru s počtem kol.
+
+TournamentService.cs
+CurrentTournament(Tournament) – Uchovává aktuálně otevřený turnaj, nebo null, pokud žádný není.
+TournamentService()(konstruktor) – Vytvoří službu turnaje, ve které na začátku není žádný turnaj.
+CreateTournament()(bool) – Založí nový turnaj, pokud je počet kol alespoň 1.
+name(string) – Je vstupní parametr metody CreateTournament() s názvem turnaje.
+discipline(string) – Je vstupní parametr metody CreateTournament() s disciplínou.
+rounds(int) – Je vstupní parametr metody CreateTournament() s počtem kol.
+
+Program.cs
+tournamentService(TournamentService) – Uchovává službu pro správu turnaje, přes kterou program zakládá turnaj a přihlašuje hráče.
+discipline(string) – Uchovává disciplínu zadanou uživatelem při zakládání turnaje.
+rounds(int) – Uchovává počet kol zadaný uživatelem.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
