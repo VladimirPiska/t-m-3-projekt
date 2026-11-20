@@ -31,6 +31,11 @@ public class TournamentService
 
     public bool CreateTournament(string name, string discipline, int rounds)
     {
+            if (CurrentTournament != null)
+    {
+        Console.WriteLine("Už je otevřený turnaj " + CurrentTournament.Name + ". Může být otevřený jen jeden.");
+        return false;
+    }
         if (rounds < 1)
         {
             Console.WriteLine("Pocet kol musí být alespoň 1.");
