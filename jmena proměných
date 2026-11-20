@@ -92,6 +92,18 @@ tournament(Tournament) – Je vstupní parametr metody RemovePlayer(), podle kte
 Program.cs
 player(Player) – Uchovává nalezeného hráče, kterého chce pořadatel přihlásit do turnaje.
 
+
+USERSTORY 6
+
+TournamentService.cs
+FindPlayer()(Player) – Najde přihlášeného hráče v aktuálním turnaji podle přezdívky, nebo vrátí null.
+UnregisterPlayer()(bool) – Odhlásí hráče z turnaje, pokud turnaj ještě nezačal a hráč v něm je.
+nickname(string) – Je vstupní parametr metod FindPlayer() a UnregisterPlayer() s přezdívkou hráče.
+foundPlayer(Player) – Uchovává hráče nalezeného v turnaji, kterého metoda FindPlayer() vrací.
+i(int) – Slouží jako pomocná proměnná v cyklu for při procházení přihlášených hráčů.
+position(int) – Uchovává pozici odhlašovaného hráče v poli přihlášených hráčů.
+j(int) – Slouží jako pomocná proměnná v cyklu for při posouvání hráčů v poli po odhlášení.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
