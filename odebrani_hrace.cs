@@ -26,7 +26,7 @@ public bool RemovePlayer(string nickname)
 
     for (int j = position; j < PlayerCount - 1; j++)
     {
-        Players[j] = Players[j + 1];
+        Players[j] = Players[j + 1];                        // edit kontroly - proc nedeletnout hrace remove from list ale vlastne mergovat dva lidi do jednoho?
     }
 
     PlayerCount--;
