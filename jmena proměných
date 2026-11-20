@@ -74,6 +74,24 @@ tournamentService(TournamentService) – Uchovává službu pro správu turnaje,
 discipline(string) – Uchovává disciplínu zadanou uživatelem při zakládání turnaje.
 rounds(int) – Uchovává počet kol zadaný uživatelem.
 
+
+USERSTORY 5
+
+Tournament.cs
+ContainsPlayer()(bool) – Zjistí, jestli je daný hráč přihlášený do turnaje.
+player(Player) – Je vstupní parametr metody ContainsPlayer() s hráčem, který se kontroluje.
+i(int) – Slouží jako pomocná proměnná v cyklu for při procházení přihlášených hráčů.
+
+TournamentService.cs
+RegisterPlayer()(bool) – Přihlásí hráče do turnaje, pokud turnaj existuje, ještě nezačal, hráč není přihlášený a turnaj není plný.
+player(Player) – Je vstupní parametr metody RegisterPlayer() s hráčem, kterého chce pořadatel přihlásit.
+
+PlayerService.cs
+tournament(Tournament) – Je vstupní parametr metody RemovePlayer(), podle kterého se kontroluje, jestli hráč není přihlášený do turnaje.
+
+Program.cs
+player(Player) – Uchovává nalezeného hráče, kterého chce pořadatel přihlásit do turnaje.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
