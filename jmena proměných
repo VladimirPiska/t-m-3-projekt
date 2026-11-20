@@ -39,6 +39,13 @@ USERSTORY 2
 PlayerService.cs
 ShowPlayers()(void) – Vypíše seznam všech hráčů v systému s jejich přezdívkou a jménem.
 
+USERSTORY 3
+
+PlayerService.cs
+RemovePlayer()(bool) – Odebere hráče ze systému, pokud existuje a ještě neodehrál žádný zápas.
+position(int) – Uchovává pozici odebíraného hráče v poli hráčů.
+j(int) – Slouží jako pomocná proměnná v cyklu for při posouvání hráčů v poli po odebrání jednoho z nich.
+
 USERSTORY 8
 
 Player1(Player) – Uchovává prvního hráče zápasu.
